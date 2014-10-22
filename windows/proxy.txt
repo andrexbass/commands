@@ -1,0 +1,2 @@
+set HTTP_PROXY=http://andreamorim:senha@10.200.2.2:8080
+set HTTPS_PROXY=http://andreamorim:senha@10.200.2.2:8080
