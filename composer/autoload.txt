@@ -1,0 +1,6 @@
+//carregar classes no autoload do projeto
+composer dumpautoload
+ou 
+composer dump-autoload
+// -o otimaza o arquivo de autoload para produção
+composer dumpautoload -o
