@@ -1,0 +1,1 @@
+sudo puppet apply /vagrant/manifests/web.pp
