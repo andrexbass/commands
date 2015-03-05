@@ -1,0 +1,37 @@
+
+Define a repository by opening the following file: /etc/apt/sources.list , and adding the line:
+
+deb http://repos.zend.com/zend-server/8.0/deb server non-free
+
+For Ubuntu 12.04 or Debian 7 and above, use:
+
+deb http://repos.zend.com/zend-server/8.0/deb_ssl1.0 server non-free
+
+For Ubuntu 14.04 and above, use:
+
+deb http://repos.zend.com/zend-server/8.0/deb_apache2.4 server non-free
+
+For POWER8, use:
+
+deb http://repos.zend.com/zend-server/8.0/deb_power8 server non-free
+
+    Add Zend's repository public key by running:
+
+# wget http://repos.zend.com/zend.key -O- |apt-key add -
+
+    If you are using sudo to run each command the next command requires using sudo following the '|' (pipe) symbol as follows:
+
+# wget http://repos.zend.com/zend.key -O- | sudo apt-key add -
+
+    To synchronize with Zend's repository run:
+
+# aptitude update
+
+
+    Once the repository is set up, run the appropriate command according to the PHP version (5.5 or 5.6) you require:
+
+# aptitude install zend-server-php-<PHP Version>
+
+    Each package locates and downloads all relevant packages from the web.
+    The actual installation will require your confirmation.
+    After installing, a completion notification will appear, with a notice that the servers have started.
