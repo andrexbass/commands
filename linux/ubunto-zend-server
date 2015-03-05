@@ -35,3 +35,8 @@ deb http://repos.zend.com/zend-server/8.0/deb_power8 server non-free
     Each package locates and downloads all relevant packages from the web.
     The actual installation will require your confirmation.
     After installing, a completion notification will appear, with a notice that the servers have started.
+    
+    
+    
+Its Work https://192.168.33.10:10082/ZendServer
+         http://<Server_IP>:10081/ZendServer.
