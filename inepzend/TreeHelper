@@ -1,0 +1,194 @@
+Utilizando o componente no Form
+​​[code]​​
+        $arrTree = array(
+            array(
+                '101 - Departamento Pessoal',
+                array('span' => true, 'strong' => true, 'value' => '101'),
+            ),
+            array(
+                '102 - Atividades Curriculares',
+                array('span' => true, 'strong' => true, 'value' => '102'),
+                array(
+                    array(
+                        '101 - Contra-cheques',
+                        array('span' => true, 'strong' => true, 'value' => '102-101', 'callback' => 'loadData'),
+                    ),
+                    array(
+                        '102 - Cursos complementares',
+                        array('span' => true, 'strong' => true, 'value' => '102-102', 'callback' => 'loadData'),
+                        array()
+                    )
+                ),
+            ),
+            array(
+                '120 - Texto do Código',
+                array('span' => true, 'strong' => true, 'value' => '120'),
+                array(
+                ),
+            ),
+            array(
+                '130 - Texto do Código',
+                array('span' => true, 'strong' => true, 'value' => '130'),
+                array(
+                    array(
+                        '110.1 - Texto do código',
+                        array('span' => true, 'strong' => true, 'value' => '130-110.1', 'callback' => 'loadData'),
+                    ),
+                    array(
+                        '110.2 - Texto do código',
+                        array('span' => true, 'strong' => true, 'value' => '130-110.2', 'callback' => 'loadData'),
+                        array()
+                    ),
+                    array(
+                        '110.3 - Texto do código',
+                        array('span' => true, 'strong' => true, 'value' => '130-110.3', 'callback' => 'loadData'),
+                        array()
+                    ),
+                ),
+                array(
+                    '111 - Texto do Código',
+                    array('span' => true, 'strong' => true, 'value' => '111', 'callback' => 'loadData'),
+                    array(
+                    ),
+                ),
+                array(
+                    '112 - Texto do Código',
+                    array('span' => true, 'strong' => true, 'value' => '112', 'callback' => 'loadData'),
+                    array(
+                    ),
+                ),
+            ),
+            array(
+                '111 - Texto do Código',
+                array('span' => true, 'strong' => true, 'value' => '111'),
+                array(
+                ),
+            ),
+            array(
+                '112 - Texto do Código',
+                array('span' => true, 'strong' => true, 'value' => '112'),
+                array(
+                ),
+            ),
+            array(
+                '113 - Texto do Código',
+                array('span' => true, 'strong' => true, 'value' => '113'),
+                array(
+                    array(
+                        '111.1 - Texto do código',
+                        array('span' => true, 'strong' => true, 'value' => '113-111.1', 'callback' => 'loadData'),
+                    ),
+                    array(
+                        '111.2 - Texto do código',
+                        array('span' => true, 'strong' => true, 'value' => '113-111.2', 'callback' => 'loadData'),
+                        array()
+                    ),
+                    array(
+                        '111.3 - Texto do código',
+                        array('span' => true, 'strong' => true, 'value' => '113-111.3', 'callback' => 'loadData'),
+                        array()
+                    ),
+                ),
+            ),            
+        );
+        $treeHelper = new TreeHelper();
+        $this->addHtml($treeHelper->render($arrTree, true, true));​
+[/code]
+​Utilizando o componente no arquivo phtml.
+​[code]
+    <?php
+    $arrTree = array(
+        array(
+            '101 - Departamento Pessoal',
+            array('span' => true, 'strong' => true, 'value' => '101'),
+        ),
+        array(
+            '102 - Atividades Curriculares',
+            array('span' => true, 'strong' => true, 'value' => '102'),
+            array(
+                array(
+                    '101 - Contra-cheques',
+                    array('span' => true, 'strong' => true, 'value' => '102-101', 'callback' => 'loadData'),
+                ),
+                array(
+                    '102 - Cursos complementares',
+                    array('span' => true, 'strong' => true, 'value' => '102-102', 'callback' => 'loadData'),
+                    array()
+                )
+            ),
+        ),
+        array(
+            '120 - Texto do Código',
+            array('span' => true, 'strong' => true, 'value' => '120'),
+            array(
+            ),
+        ),
+        array(
+            '130 - Texto do Código',
+            array('span' => true, 'strong' => true, 'value' => '130'),
+            array(
+                array(
+                    '110.1 - Texto do código',
+                    array('span' => true, 'strong' => true, 'value' => '130-110.1', 'callback' => 'loadData'),
+                ),
+                array(
+                    '110.2 - Texto do código',
+                    array('span' => true, 'strong' => true, 'value' => '130-110.2', 'callback' => 'loadData'),
+                    array()
+                ),
+                array(
+                    '110.3 - Texto do código',
+                    array('span' => true, 'strong' => true, 'value' => '130-110.3', 'callback' => 'loadData'),
+                    array()
+                ),
+            ),
+            array(
+                '111 - Texto do Código',
+                array('span' => true, 'strong' => true, 'value' => '111', 'callback' => 'loadData'),
+                array(
+                ),
+            ),
+            array(
+                '112 - Texto do Código',
+                array('span' => true, 'strong' => true, 'value' => '112', 'callback' => 'loadData'),
+                array(
+                ),
+            ),
+        ),
+        array(
+            '111 - Texto do Código',
+            array('span' => true, 'strong' => true, 'value' => '111'),
+            array(
+            ),
+        ),
+        array(
+            '112 - Texto do Código',
+            array('span' => true, 'strong' => true, 'value' => '112'),
+            array(
+            ),
+        ),
+        array(
+            '113 - Texto do Código',
+            array('span' => true, 'strong' => true, 'value' => '113'),
+            array(
+                array(
+                    '111.1 - Texto do código',
+                    array('span' => true, 'strong' => true, 'value' => '113-111.1', 'callback' => 'loadData'),
+                ),
+                array(
+                    '111.2 - Texto do código',
+                    array('span' => true, 'strong' => true, 'value' => '113-111.2', 'callback' => 'loadData'),
+                    array()
+                ),
+                array(
+                    '111.3 - Texto do código',
+                    array('span' => true, 'strong' => true, 'value' => '113-111.3', 'callback' => 'loadData'),
+                    array()
+                ),
+            ),
+        ),
+    );
+    echo $this->tree()->render($arrTree, true, true);
+    ?>
+
+[/code]
